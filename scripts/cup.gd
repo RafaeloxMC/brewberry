@@ -12,7 +12,6 @@ func fill() -> void:
 	animated_sprite_2d.play(size + "_fill")
 
 func _on_mouse_entered():
-	print("Entered " + name)
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) && GameManager.is_dragging == null:
 		GameManager.is_dragging = self
 
@@ -23,3 +22,8 @@ func _on_mouse_exited():
 func _process(_delta: float):
 	if GameManager.is_dragging == self and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		position = get_global_mouse_position()
+
+
+func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if event.is_action("lmb") && GameManager.is_dragging == null:
+		GameManager.is_dragging = self

@@ -241,5 +241,6 @@ animation = &"sm_fill"
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_7q2t1")
 
+[connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

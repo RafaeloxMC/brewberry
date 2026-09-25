@@ -54,7 +54,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kqa8n"]
-size = Vector2(24, 22)
+size = Vector2(6, 11)
 
 [node name="Fountain" type="Area2D" unique_id=1561647196]
 script = ExtResource("2_m72p2")
@@ -71,7 +71,7 @@ sprite_frames = SubResource("SpriteFrames_a751v")
 animation = &"fill"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=777124484]
-position = Vector2(0, 5)
+position = Vector2(-5, 5.5)
 shape = SubResource("RectangleShape2D_kqa8n")
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
