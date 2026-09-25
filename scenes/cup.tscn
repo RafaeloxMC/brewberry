@@ -23,6 +23,10 @@ region = Rect2(64, 64, 32, 32)
 atlas = ExtResource("1_vafus")
 region = Rect2(64, 96, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcd3g"]
+atlas = ExtResource("1_vafus")
+region = Rect2(64, 128, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_kru4q"]
 atlas = ExtResource("1_vafus")
 region = Rect2(64, 128, 32, 32)
@@ -50,6 +54,10 @@ region = Rect2(32, 64, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_nstyu"]
 atlas = ExtResource("1_vafus")
 region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5pc6"]
+atlas = ExtResource("1_vafus")
+region = Rect2(32, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6anhe"]
 atlas = ExtResource("1_vafus")
@@ -79,6 +87,10 @@ region = Rect2(0, 64, 32, 32)
 atlas = ExtResource("1_vafus")
 region = Rect2(0, 96, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_w15yx"]
+atlas = ExtResource("1_vafus")
+region = Rect2(0, 128, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1rwi"]
 atlas = ExtResource("1_vafus")
 region = Rect2(0, 160, 32, 32)
@@ -89,7 +101,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7q2t1")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"lg_empty",
 "speed": 5.0
 }, {
@@ -105,8 +117,11 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hqvn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcd3g")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"lg_fill",
 "speed": 5.0
 }, {
@@ -114,7 +129,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kru4q")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"lg_foam",
 "speed": 5.0
 }, {
@@ -122,7 +137,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v8m4r")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"lg_foam_straw",
 "speed": 5.0
 }, {
@@ -130,7 +145,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kjo86")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"md_empty",
 "speed": 5.0
 }, {
@@ -146,8 +161,11 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nstyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5pc6")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"md_fill",
 "speed": 5.0
 }, {
@@ -155,7 +173,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6anhe")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"md_foam",
 "speed": 5.0
 }, {
@@ -163,7 +181,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ioq4v")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"md_foam_straw",
 "speed": 5.0
 }, {
@@ -171,7 +189,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ww23s")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"sm_empty",
 "speed": 5.0
 }, {
@@ -187,13 +205,16 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1nor8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w15yx")
 }],
 "loop": 0,
 "name": &"sm_fill",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": 1,
+"loop": 0,
 "name": &"sm_foam",
 "speed": 5.0
 }, {
@@ -201,12 +222,24 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_u1rwi")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"sm_foam_straw",
 "speed": 5.0
 }]
 
-[node name="Cup" type="AnimatedSprite2D" unique_id=1958768658]
-sprite_frames = SubResource("SpriteFrames_a751v")
-animation = &"lg_foam_straw"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7q2t1"]
+size = Vector2(12, 26)
+
+[node name="Cup" type="Area2D" unique_id=1856958388]
 script = ExtResource("2_7q2t1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=187262395]
+sprite_frames = SubResource("SpriteFrames_a751v")
+animation = &"sm_fill"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=284815782]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_7q2t1")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

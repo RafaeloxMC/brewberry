@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cs8v2ww33xtad"]
+
+[ext_resource type="Texture2D" uid="uid://btgyylw7lo5u" path="res://assets/fountain.png" id="1_50hkb"]
+[ext_resource type="Script" uid="uid://cwgyun03jgsjp" path="res://scripts/fountain.gd" id="2_m72p2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a751v"]
+size = Vector2(3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m72p2"]
+atlas = ExtResource("1_50hkb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfgns"]
+atlas = ExtResource("1_50hkb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uterx"]
+atlas = ExtResource("1_50hkb")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xo7qt"]
+atlas = ExtResource("1_50hkb")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a751v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m72p2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfgns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uterx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xo7qt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m72p2")
+}],
+"loop": 0,
+"name": &"fill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m72p2")
+}],
+"loop": 0,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqa8n"]
+size = Vector2(24, 22)
+
+[node name="Fountain" type="Area2D" unique_id=1561647196]
+script = ExtResource("2_m72p2")
+
+[node name="Button" type="Area2D" parent="." unique_id=75233818]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button" unique_id=1620213874]
+position = Vector2(-9.5, 13.5)
+shape = SubResource("RectangleShape2D_a751v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1154903033]
+sprite_frames = SubResource("SpriteFrames_a751v")
+animation = &"fill"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=777124484]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_kqa8n")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]

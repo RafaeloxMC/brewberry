@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://ojxmii70g2c0"]
+
+[ext_resource type="Texture2D" uid="uid://ksikdboo53a0" path="res://assets/counter.png" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://0imy34dafskp" path="res://assets/floor.png" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cs8v2ww33xtad" path="res://scenes/fountain.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://d0e7jpk72s2h5" path="res://scenes/cup.tscn" id="4_lbhrr"]
+
+[node name="Game" type="Control" unique_id=1593082054]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=2125246696]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_yqjtg")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1273773350]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -498.0
+offset_right = 576.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("1_uwrxv")
+
+[node name="Fountain" parent="." unique_id=987769952 instance=ExtResource("3_lnu2h")]
+position = Vector2(576, 150)
+scale = Vector2(12, 12)
+
+[node name="Cups" type="Node2D" parent="." unique_id=97841430]
+
+[node name="SM" type="Node2D" parent="Cups" unique_id=725782037]
+
+[node name="Cup" parent="Cups/SM" unique_id=1757127250 instance=ExtResource("4_lbhrr")]
+position = Vector2(365, 420)
+scale = Vector2(4, 4)
+
+[node name="Cup2" parent="Cups/SM" unique_id=369276659 instance=ExtResource("4_lbhrr")]
+position = Vector2(312, 430)
+scale = Vector2(4, 4)
+
+[node name="Cup3" parent="Cups/SM" unique_id=1751608937 instance=ExtResource("4_lbhrr")]
+position = Vector2(262, 439)
+scale = Vector2(4, 4)
+
+[node name="Cup4" parent="Cups/SM" unique_id=1077997539 instance=ExtResource("4_lbhrr")]
+position = Vector2(212, 451)
+scale = Vector2(4, 4)
+
+[node name="Cup5" parent="Cups/SM" unique_id=1436938571 instance=ExtResource("4_lbhrr")]
+position = Vector2(163, 468)
+scale = Vector2(4, 4)
+
+[node name="Cup6" parent="Cups/SM" unique_id=656500815 instance=ExtResource("4_lbhrr")]
+position = Vector2(115, 488)
+scale = Vector2(4, 4)
+
+[node name="MD" type="Node2D" parent="Cups" unique_id=2023505172]
+
+[node name="Cup" parent="Cups/MD" unique_id=68109897 instance=ExtResource("4_lbhrr")]
+position = Vector2(365, 514)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="Cup2" parent="Cups/MD" unique_id=1704491323 instance=ExtResource("4_lbhrr")]
+position = Vector2(312, 524)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="Cup3" parent="Cups/MD" unique_id=334442519 instance=ExtResource("4_lbhrr")]
+position = Vector2(262, 533)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="Cup4" parent="Cups/MD" unique_id=1816947874 instance=ExtResource("4_lbhrr")]
+position = Vector2(212, 545)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="Cup5" parent="Cups/MD" unique_id=745165440 instance=ExtResource("4_lbhrr")]
+position = Vector2(163, 562)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="Cup6" parent="Cups/MD" unique_id=1503438654 instance=ExtResource("4_lbhrr")]
+position = Vector2(115, 582)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="LG" type="Node2D" parent="Cups" unique_id=230730839]
+
+[node name="Cup" parent="Cups/LG" unique_id=1561250279 instance=ExtResource("4_lbhrr")]
+position = Vector2(365, 608)
+scale = Vector2(4, 4)
+size = "lg"
+
+[node name="Cup2" parent="Cups/LG" unique_id=2147032949 instance=ExtResource("4_lbhrr")]
+position = Vector2(312, 618)
+scale = Vector2(4, 4)
+size = "lg"
+
+[node name="Cup3" parent="Cups/LG" unique_id=1211114062 instance=ExtResource("4_lbhrr")]
+position = Vector2(262, 627)
+scale = Vector2(4, 4)
+size = "lg"
+
+[node name="Cup4" parent="Cups/LG" unique_id=742626015 instance=ExtResource("4_lbhrr")]
+position = Vector2(212, 639)
+scale = Vector2(4, 4)
+size = "lg"
+
+[node name="Cup5" parent="Cups/LG" unique_id=1703620392 instance=ExtResource("4_lbhrr")]
+position = Vector2(163, 656)
+scale = Vector2(4, 4)
+size = "lg"
+
+[node name="Cup6" parent="Cups/LG" unique_id=185548578 instance=ExtResource("4_lbhrr")]
+position = Vector2(115, 676)
+scale = Vector2(4, 4)
+size = "lg"
