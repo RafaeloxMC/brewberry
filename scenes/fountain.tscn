@@ -74,4 +74,5 @@ animation = &"fill"
 position = Vector2(-5, 5.5)
 shape = SubResource("RectangleShape2D_kqa8n")
 
+[connection signal="input_event" from="Button" to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
