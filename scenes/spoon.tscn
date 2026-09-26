@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bd3a2ldv4k0n8"]
+
+[ext_resource type="Script" uid="uid://d307ef4b4x04g" path="res://scripts/spoon.gd" id="1_cax38"]
+[ext_resource type="Texture2D" uid="uid://cb5p7e2lsug7y" path="res://assets/spoon.png" id="1_l12hh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a751v"]
+size = Vector2(30, 9)
+
+[node name="Spoon" type="Area2D" unique_id=1752889901]
+script = ExtResource("1_cax38")
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="." unique_id=961665854]
+texture = ExtResource("1_l12hh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1944596648]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_a751v")

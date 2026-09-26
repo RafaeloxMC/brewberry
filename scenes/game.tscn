@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d0e7jpk72s2h5" path="res://scenes/cup.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b15eqk2cxq0gu" path="res://scenes/cash_register.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://c3vwfwqk51ek4" path="res://scenes/order_area.tscn" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://bd3a2ldv4k0n8" path="res://scenes/spoon.tscn" id="7_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://c6xpkcdjyd1gt" path="res://scenes/note.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://clm4jrv6u7g2o" path="res://scenes/straw_container.tscn" id="8_gee14"]
 
@@ -151,6 +152,12 @@ size = "lg"
 position = Vector2(115, 676)
 scale = Vector2(4, 4)
 size = "lg"
+
+[node name="Spoon" parent="Cups/LG" unique_id=1752889901 instance=ExtResource("7_0tnpc")]
+position = Vector2(284, 242)
+rotation = -0.23212878
+scale = Vector2(4, 4)
+skew = 0.23212878
 
 [node name="Note" parent="." unique_id=331613462 instance=ExtResource("7_u5sy4")]
 position = Vector2(770, 432.415)

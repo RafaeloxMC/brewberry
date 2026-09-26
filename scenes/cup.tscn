@@ -35,6 +35,14 @@ region = Rect2(64, 128, 32, 32)
 atlas = ExtResource("1_vafus")
 region = Rect2(64, 160, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8twmq"]
+atlas = ExtResource("1_vafus")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apqnk"]
+atlas = ExtResource("1_vafus")
+region = Rect2(64, 192, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_kjo86"]
 atlas = ExtResource("1_vafus")
 region = Rect2(32, 0, 32, 32)
@@ -67,6 +75,14 @@ region = Rect2(32, 128, 32, 32)
 atlas = ExtResource("1_vafus")
 region = Rect2(32, 160, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rlfh"]
+atlas = ExtResource("1_vafus")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3urvu"]
+atlas = ExtResource("1_vafus")
+region = Rect2(32, 192, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ww23s"]
 atlas = ExtResource("1_vafus")
 region = Rect2(0, 0, 32, 32)
@@ -98,6 +114,14 @@ region = Rect2(0, 128, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1rwi"]
 atlas = ExtResource("1_vafus")
 region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0i88"]
+atlas = ExtResource("1_vafus")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbq1o"]
+atlas = ExtResource("1_vafus")
+region = Rect2(0, 192, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a751v"]
 animations = [{
@@ -147,6 +171,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_8twmq")
+}],
+"loop": 0,
+"name": &"lg_foamless",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apqnk")
+}],
+"loop": 0,
+"name": &"lg_foamless_straw",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_kjo86")
 }],
 "loop": 0,
@@ -187,6 +227,22 @@ animations = [{
 }],
 "loop": 0,
 "name": &"md_foam_straw",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rlfh")
+}],
+"loop": 0,
+"name": &"md_foamless",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3urvu")
+}],
+"loop": 0,
+"name": &"md_foamless_straw",
 "speed": 5.0
 }, {
 "frames": [{
@@ -232,6 +288,22 @@ animations = [{
 "loop": 0,
 "name": &"sm_foam_straw",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0i88")
+}],
+"loop": 0,
+"name": &"sm_foamless",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbq1o")
+}],
+"loop": 0,
+"name": &"sm_foamless_straw",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7q2t1"]
@@ -242,7 +314,7 @@ script = ExtResource("2_7q2t1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=187262395]
 sprite_frames = SubResource("SpriteFrames_a751v")
-animation = &"lg_fill"
+animation = &"sm_foamless_straw"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=284815782]
 position = Vector2(0, 3)

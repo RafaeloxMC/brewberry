@@ -6,7 +6,7 @@ func _process(_delta: float) -> void:
 			if area is not Cup:
 				continue
 			if area.size == GameManager.current_order_size:
-				if GameManager.current_order_foam != (area.get_child(0).animation.contains("_foam") || area.get_child(0).animation.contains("_fill")):
+				if GameManager.current_order_foam != ((area.get_child(0).animation.contains("_foam") && !area.get_child(0).animation.contains("_foamless")) || area.get_child(0).animation.contains("_fill")):
 					continue
 				if GameManager.current_order_straw != area.get_child(0).animation.contains("_straw"):
 					continue

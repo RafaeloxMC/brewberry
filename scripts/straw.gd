@@ -21,6 +21,6 @@ func _process(_delta: float) -> void:
 				if not (area.get_child_count() > 0 && area.get_child(0) is AnimatedSprite2D):
 					continue
 				var child: AnimatedSprite2D = area.get_child(0)
-				child.play(child.animation.split("_")[0] + ("_foam" if child.animation.split("_")[1] == "fill" else "") + "_straw")
+				child.play(child.animation.split("_")[0] + ("_foam" if child.animation.split("_")[1] == "fill" else "_foamless") + "_straw")
 				print("Added straw to drink")
 		self.queue_free()
