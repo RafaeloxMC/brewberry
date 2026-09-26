@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d0e7jpk72s2h5" path="res://scenes/cup.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b15eqk2cxq0gu" path="res://scenes/cash_register.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://c3vwfwqk51ek4" path="res://scenes/order_area.tscn" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://c6xpkcdjyd1gt" path="res://scenes/note.tscn" id="7_u5sy4"]
 
 [node name="Game" type="Control" unique_id=1593082054]
 layout_mode = 3
@@ -149,3 +150,7 @@ size = "lg"
 position = Vector2(115, 676)
 scale = Vector2(4, 4)
 size = "lg"
+
+[node name="Note" parent="." unique_id=331613462 instance=ExtResource("7_u5sy4")]
+position = Vector2(770, 432.415)
+scale = Vector2(5, 5)

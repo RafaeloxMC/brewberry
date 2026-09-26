@@ -7,9 +7,10 @@ signal sell(price: int)
 var is_dragging: Node2D = null
 var cash := 0
 
+var current_order_active = false
 var current_order_size = "lg"
 var current_order_foam = true
-var current_order_straw = true
+var current_order_straw = false
 
 func _ready() -> void:
 	sell.connect(_on_sold)

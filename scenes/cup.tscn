@@ -91,6 +91,10 @@ region = Rect2(0, 96, 32, 32)
 atlas = ExtResource("1_vafus")
 region = Rect2(0, 128, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu8mn"]
+atlas = ExtResource("1_vafus")
+region = Rect2(0, 128, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1rwi"]
 atlas = ExtResource("1_vafus")
 region = Rect2(0, 160, 32, 32)
@@ -213,7 +217,10 @@ animations = [{
 "name": &"sm_fill",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu8mn")
+}],
 "loop": 0,
 "name": &"sm_foam",
 "speed": 5.0
@@ -235,7 +242,7 @@ script = ExtResource("2_7q2t1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=187262395]
 sprite_frames = SubResource("SpriteFrames_a751v")
-animation = &"sm_fill"
+animation = &"lg_fill"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=284815782]
 position = Vector2(0, 3)

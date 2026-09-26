@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://c6xpkcdjyd1gt"]
+
+[ext_resource type="Texture2D" uid="uid://mbrnvimej1xl" path="res://assets/note.png" id="1_43c4j"]
+[ext_resource type="Script" uid="uid://c1ouk2i4btk2m" path="res://scripts/note.gd" id="2_njo4t"]
+[ext_resource type="FontFile" uid="uid://digm3x8bedixb" path="res://assets/fonts/pixelsix00.ttf" id="3_8ibmt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a751v"]
+font = ExtResource("3_8ibmt")
+
+[node name="Note" type="Node2D" unique_id=1679520019]
+script = ExtResource("2_njo4t")
+
+[node name="First" type="Node2D" parent="." unique_id=1180913654]
+
+[node name="Sprite2D" type="Sprite2D" parent="First" unique_id=1581268074]
+texture = ExtResource("1_43c4j")
+
+[node name="Size" type="Label" parent="First" unique_id=1908691063]
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 36.0
+offset_bottom = 21.0
+scale = Vector2(0.3, 0.3)
+text = "sm"
+label_settings = SubResource("LabelSettings_a751v")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Second" type="Node2D" parent="." unique_id=1239720730]
+position = Vector2(12, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Second" unique_id=1795337320]
+texture = ExtResource("1_43c4j")
+
+[node name="Foam" type="Label" parent="Second" unique_id=1303508926]
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 36.0
+offset_bottom = 21.0
+scale = Vector2(0.3, 0.3)
+text = "sm"
+label_settings = SubResource("LabelSettings_a751v")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Third" type="Node2D" parent="." unique_id=1475576526]
+position = Vector2(24, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Third" unique_id=245793519]
+texture = ExtResource("1_43c4j")
+
+[node name="Straw" type="Label" parent="Third" unique_id=1467464513]
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 36.0
+offset_bottom = 21.0
+scale = Vector2(0.3, 0.3)
+text = "sm"
+label_settings = SubResource("LabelSettings_a751v")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
