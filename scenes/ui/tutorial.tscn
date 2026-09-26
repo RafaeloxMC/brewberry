@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://8krges860wpf"]
+
+[ext_resource type="Script" uid="uid://v8n2cd2qi36y" path="res://scripts/tutorial.gd" id="1_6e533"]
+[ext_resource type="Texture2D" uid="uid://bpxplnb43dvn4" path="res://assets/bubble.png" id="1_k8r76"]
+[ext_resource type="FontFile" uid="uid://digm3x8bedixb" path="res://assets/fonts/pixelsix00.ttf" id="3_4de72"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a751v"]
+font = ExtResource("3_4de72")
+font_color = Color(0.09019608, 0.09019608, 0.09019608, 1)
+
+[node name="Tutorial" type="Control" unique_id=103318636]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6e533")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1244814228]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Bubble" type="TextureRect" parent="." unique_id=847570699]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 396.0
+offset_right = 274.0
+offset_bottom = 638.0
+texture = ExtResource("1_k8r76")
+
+[node name="Label" type="Label" parent="Bubble" unique_id=1824027018]
+custom_minimum_size = Vector2(201, 106)
+custom_maximum_size = Vector2(201, 106)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.708
+anchor_right = 0.5
+anchor_bottom = 0.708
+offset_left = -103.0
+offset_top = -57.336
+offset_right = 98.0
+offset_bottom = 48.664
+grow_horizontal = 2
+grow_vertical = 2
+text = "yo, tutorial text here"
+label_settings = SubResource("LabelSettings_a751v")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
