@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c3vwfwqk51ek4"]
 
 [ext_resource type="Texture2D" uid="uid://cdqf7tu1q6kya" path="res://assets/order_area.png" id="1_b8i8f"]
+[ext_resource type="Script" uid="uid://btar5cjsmsh84" path="res://scripts/order_area.gd" id="1_yrwyj"]
 [ext_resource type="FontFile" uid="uid://digm3x8bedixb" path="res://assets/fonts/pixelsix00.ttf" id="2_yrwyj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a751v"]
@@ -11,6 +12,7 @@ font = ExtResource("2_yrwyj")
 font_color = Color(0.7764706, 0.7764706, 0.7764706, 1)
 
 [node name="OrderArea" type="Area2D" unique_id=1861658053]
+script = ExtResource("1_yrwyj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=717666921]
 texture = ExtResource("1_b8i8f")
