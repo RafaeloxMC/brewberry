@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://dyiy81m166fuh"]
 
 [ext_resource type="Script" uid="uid://cnikwwi4tmceq" path="res://scripts/game_manager.gd" id="1_hwd4i"]
+[ext_resource type="AudioStream" uid="uid://dvw0ab27p6jno" path="res://assets/audio/cash_register.wav" id="2_glms7"]
 
 [node name="GameManager" type="Node" unique_id=1793481844]
 script = ExtResource("1_hwd4i")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=580630641]
+stream = ExtResource("2_glms7")

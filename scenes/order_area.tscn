@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c3vwfwqk51ek4"]
+
+[ext_resource type="Texture2D" uid="uid://cdqf7tu1q6kya" path="res://assets/order_area.png" id="1_b8i8f"]
+[ext_resource type="FontFile" uid="uid://digm3x8bedixb" path="res://assets/fonts/pixelsix00.ttf" id="2_yrwyj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a751v"]
+size = Vector2(21, 21.67767)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a751v"]
+font = ExtResource("2_yrwyj")
+font_color = Color(0.7764706, 0.7764706, 0.7764706, 1)
+
+[node name="OrderArea" type="Area2D" unique_id=1861658053]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=717666921]
+texture = ExtResource("1_b8i8f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1018483706]
+position = Vector2(-0.1642128, 8.664213)
+scale = Vector2(1, 0.99999994)
+skew = 0.7853981
+shape = SubResource("RectangleShape2D_a751v")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=695842621]
+skew = 0.7853982
+
+[node name="Label" type="Label" parent="Node2D" unique_id=63264510]
+offset_left = 2.0
+offset_top = 5.656855
+offset_right = 46.0
+offset_bottom = 44.656857
+scale = Vector2(0.3, 0.3)
+text = "place
+order"
+label_settings = SubResource("LabelSettings_a751v")

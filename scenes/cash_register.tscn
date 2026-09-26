@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b15eqk2cxq0gu"]
 
 [ext_resource type="Texture2D" uid="uid://xfwcp3ifrkrc" path="res://assets/cash_register.png" id="1_md85c"]
+[ext_resource type="Script" uid="uid://215x6587m1c8" path="res://scripts/cash_register.gd" id="1_yqhqo"]
 [ext_resource type="FontFile" uid="uid://digm3x8bedixb" path="res://assets/fonts/pixelsix00.ttf" id="2_qyy31"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a751v"]
@@ -11,6 +12,7 @@ font_color = Color(0, 0.7411765, 0, 1)
 size = Vector2(30, 29)
 
 [node name="CashRegister" type="StaticBody2D" unique_id=1554111202]
+script = ExtResource("1_yqhqo")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=577701178]
 position = Vector2(-0.25, -0.3)
