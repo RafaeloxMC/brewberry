@@ -3,6 +3,7 @@ extends Node
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 signal sell(price: int)
+@warning_ignore("unused_signal")
 signal right_button_pressed()
 
 var is_dragging: Node2D = null

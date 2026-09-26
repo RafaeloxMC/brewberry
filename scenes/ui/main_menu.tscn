@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://0f484ed05i1t"]
+
+[ext_resource type="LabelSettings" uid="uid://b8d622n7giihb" path="res://assets/main_menu_label_settings.tres" id="1_7suek"]
+[ext_resource type="Script" uid="uid://bo5jsnn1bdrfs" path="res://scripts/main_menu.gd" id="1_otr3d"]
+[ext_resource type="Texture2D" uid="uid://0imy34dafskp" path="res://assets/floor.png" id="4_5pajh"]
+[ext_resource type="Texture2D" uid="uid://ksikdboo53a0" path="res://assets/counter.png" id="5_j7ex8"]
+[ext_resource type="PackedScene" uid="uid://cs8v2ww33xtad" path="res://scenes/fountain.tscn" id="6_a8gd2"]
+[ext_resource type="PackedScene" uid="uid://c3vwfwqk51ek4" path="res://scenes/order_area.tscn" id="7_hstxw"]
+[ext_resource type="PackedScene" uid="uid://b15eqk2cxq0gu" path="res://scenes/cash_register.tscn" id="8_8egab"]
+[ext_resource type="PackedScene" uid="uid://c6xpkcdjyd1gt" path="res://scenes/note.tscn" id="9_gw5y6"]
+[ext_resource type="PackedScene" uid="uid://clm4jrv6u7g2o" path="res://scenes/straw_container.tscn" id="10_svtp6"]
+[ext_resource type="PackedScene" uid="uid://bjjnuy0b0f3la" path="res://scenes/phone.tscn" id="11_1dfpl"]
+[ext_resource type="PackedScene" uid="uid://d0e7jpk72s2h5" path="res://scenes/cup.tscn" id="12_qywvv"]
+[ext_resource type="PackedScene" uid="uid://bd3a2ldv4k0n8" path="res://scenes/spoon.tscn" id="13_3wgol"]
+
+[node name="MainMenu" type="Control" unique_id=1593082054]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_otr3d")
+
+[node name="Floor" type="TextureRect" parent="." unique_id=2125246696]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_5pajh")
+
+[node name="Counter" type="TextureRect" parent="." unique_id=1273773350]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -498.0
+offset_right = 576.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("5_j7ex8")
+
+[node name="Fountain" parent="." unique_id=987769952 instance=ExtResource("6_a8gd2")]
+position = Vector2(576, 140)
+scale = Vector2(10, 10)
+
+[node name="OrderArea" parent="." unique_id=1861658053 instance=ExtResource("7_hstxw")]
+position = Vector2(856, 202)
+rotation = 0.17453292
+scale = Vector2(10, 10)
+skew = -0.17453301
+
+[node name="Note" parent="." unique_id=331613462 instance=ExtResource("9_gw5y6")]
+position = Vector2(770, 432.415)
+scale = Vector2(5, 5)
+
+[node name="StrawContainer" parent="." unique_id=1398983660 instance=ExtResource("10_svtp6")]
+position = Vector2(413, 209)
+rotation = -0.03490658
+scale = Vector2(7.0000005, 7)
+skew = 0.034906507
+
+[node name="Cups" type="Node2D" parent="." unique_id=97841430]
+
+[node name="SM" type="Node2D" parent="Cups" unique_id=725782037]
+
+[node name="Cup" parent="Cups/SM" unique_id=1757127250 instance=ExtResource("12_qywvv")]
+position = Vector2(365, 420)
+scale = Vector2(4, 4)
+
+[node name="Cup2" parent="Cups/SM" unique_id=369276659 instance=ExtResource("12_qywvv")]
+position = Vector2(312, 430)
+scale = Vector2(4, 4)
+
+[node name="Cup3" parent="Cups/SM" unique_id=1751608937 instance=ExtResource("12_qywvv")]
+position = Vector2(262, 439)
+scale = Vector2(4, 4)
+
+[node name="Cup4" parent="Cups/SM" unique_id=1077997539 instance=ExtResource("12_qywvv")]
+position = Vector2(212, 451)
+scale = Vector2(4, 4)
+
+[node name="Cup5" parent="Cups/SM" unique_id=1436938571 instance=ExtResource("12_qywvv")]
+position = Vector2(163, 468)
+scale = Vector2(4, 4)
+
+[node name="Cup6" parent="Cups/SM" unique_id=656500815 instance=ExtResource("12_qywvv")]
+position = Vector2(115, 488)
+scale = Vector2(4, 4)
+
+[node name="MD" type="Node2D" parent="Cups" unique_id=2023505172]
+
+[node name="Cup" parent="Cups/MD" unique_id=68109897 instance=ExtResource("12_qywvv")]
+position = Vector2(365, 514)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="Cup2" parent="Cups/MD" unique_id=1704491323 instance=ExtResource("12_qywvv")]
+position = Vector2(312, 524)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="Cup3" parent="Cups/MD" unique_id=334442519 instance=ExtResource("12_qywvv")]
+position = Vector2(262, 533)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="Cup4" parent="Cups/MD" unique_id=1816947874 instance=ExtResource("12_qywvv")]
+position = Vector2(212, 545)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="Cup5" parent="Cups/MD" unique_id=745165440 instance=ExtResource("12_qywvv")]
+position = Vector2(163, 562)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="Cup6" parent="Cups/MD" unique_id=1503438654 instance=ExtResource("12_qywvv")]
+position = Vector2(115, 582)
+scale = Vector2(4, 4)
+size = "md"
+
+[node name="LG" type="Node2D" parent="Cups" unique_id=230730839]
+
+[node name="Cup" parent="Cups/LG" unique_id=1561250279 instance=ExtResource("12_qywvv")]
+position = Vector2(365, 608)
+scale = Vector2(4, 4)
+size = "lg"
+
+[node name="Cup2" parent="Cups/LG" unique_id=2147032949 instance=ExtResource("12_qywvv")]
+position = Vector2(312, 618)
+scale = Vector2(4, 4)
+size = "lg"
+
+[node name="Cup3" parent="Cups/LG" unique_id=1211114062 instance=ExtResource("12_qywvv")]
+position = Vector2(262, 627)
+scale = Vector2(4, 4)
+size = "lg"
+
+[node name="Cup4" parent="Cups/LG" unique_id=742626015 instance=ExtResource("12_qywvv")]
+position = Vector2(212, 639)
+scale = Vector2(4, 4)
+size = "lg"
+
+[node name="Cup5" parent="Cups/LG" unique_id=1703620392 instance=ExtResource("12_qywvv")]
+position = Vector2(163, 656)
+scale = Vector2(4, 4)
+size = "lg"
+
+[node name="Cup6" parent="Cups/LG" unique_id=185548578 instance=ExtResource("12_qywvv")]
+position = Vector2(115, 676)
+scale = Vector2(4, 4)
+size = "lg"
+
+[node name="Spoon" parent="Cups/LG" unique_id=1752889901 instance=ExtResource("13_3wgol")]
+position = Vector2(284, 242)
+rotation = -0.23212878
+scale = Vector2(4, 4)
+skew = 0.23212878
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1010009224]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Phone" parent="ColorRect" unique_id=1601257258 instance=ExtResource("11_1dfpl")]
+modulate = Color(2.454227, 2.454227, 2.454227, 1)
+position = Vector2(87, 335.00003)
+rotation = -0.2617994
+scale = Vector2(5, 5)
+skew = 0.26179934
+
+[node name="CashRegister" parent="ColorRect" unique_id=1554111202 instance=ExtResource("8_8egab")]
+position = Vector2(1044, 252)
+rotation = 0.17453294
+scale = Vector2(7.999999, 8)
+skew = -0.17453301
+
+[node name="Play" type="Control" parent="ColorRect" unique_id=455562753]
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 200.0
+offset_right = 161.0
+offset_bottom = 396.0
+
+[node name="Quit" type="Control" parent="ColorRect" unique_id=503796644]
+anchors_preset = 0
+offset_left = 916.0
+offset_top = 56.0
+offset_right = 1154.0
+offset_bottom = 387.0
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1635613460]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 211.0
+offset_right = 108.0
+offset_bottom = 247.0
+text = "play"
+label_settings = ExtResource("1_7suek")
+
+[node name="Label2" type="Label" parent="ColorRect" unique_id=2005378390]
+layout_mode = 0
+offset_left = 1026.0
+offset_top = 60.0
+offset_right = 1090.0
+offset_bottom = 96.0
+text = "quit"
+label_settings = ExtResource("1_7suek")
+
+[connection signal="gui_input" from="ColorRect/Play" to="." method="_on_play_gui_input"]
+[connection signal="gui_input" from="ColorRect/Quit" to="." method="_on_quit_gui_input"]

@@ -12,6 +12,6 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 					animated_sprite_2d.play("fill")
 
 
-func _on_button_2_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_button_2_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event.is_action("lmb") && event.is_pressed():
 		GameManager.right_button_pressed.emit()
