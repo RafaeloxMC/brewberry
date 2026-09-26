@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cs5wwm1ty3kd0" path="res://scenes/ui/bubble.tscn" id="1_vtaks"]
 [ext_resource type="Texture2D" uid="uid://0imy34dafskp" path="res://assets/floor.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://8krges860wpf" path="res://scenes/ui/tutorial.tscn" id="2_dinhu"]
+[ext_resource type="PackedScene" uid="uid://fu7ttrqscnrj" path="res://scenes/ui/disappointment.tscn" id="3_kvuet"]
 [ext_resource type="PackedScene" uid="uid://cs8v2ww33xtad" path="res://scenes/fountain.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://d0e7jpk72s2h5" path="res://scenes/cup.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b15eqk2cxq0gu" path="res://scenes/cash_register.tscn" id="5_iywne"]
@@ -38,6 +39,8 @@ scale = Vector2(5, 5)
 flip_h = true
 
 [node name="Tutorial" parent="CanvasLayer" unique_id=103318636 instance=ExtResource("2_dinhu")]
+
+[node name="Disappointment" parent="CanvasLayer" unique_id=737688809 instance=ExtResource("3_kvuet")]
 
 [node name="Floor" type="TextureRect" parent="." unique_id=2125246696]
 layout_mode = 1

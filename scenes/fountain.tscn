@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cwgyun03jgsjp" path="res://scripts/fountain.gd" id="2_m72p2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a751v"]
-size = Vector2(3, 3)
+size = Vector2(2, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m72p2"]
 atlas = ExtResource("1_50hkb")
@@ -66,6 +66,13 @@ monitorable = false
 position = Vector2(-9.5, 13.5)
 shape = SubResource("RectangleShape2D_a751v")
 
+[node name="Button2" type="Area2D" parent="." unique_id=484066081]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button2" unique_id=1533948520]
+position = Vector2(-7, 13.5)
+shape = SubResource("RectangleShape2D_a751v")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1154903033]
 sprite_frames = SubResource("SpriteFrames_a751v")
 animation = &"fill"
@@ -76,3 +83,4 @@ shape = SubResource("RectangleShape2D_kqa8n")
 
 [connection signal="input_event" from="Button" to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="input_event" from="Button2" to="." method="_on_button_2_input_event"]
