@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://0imy34dafskp" path="res://assets/floor.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cs8v2ww33xtad" path="res://scenes/fountain.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://d0e7jpk72s2h5" path="res://scenes/cup.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://b15eqk2cxq0gu" path="res://scenes/cash_register.tscn" id="5_iywne"]
 
 [node name="Game" type="Control" unique_id=1593082054]
 layout_mode = 3
@@ -135,3 +136,9 @@ size = "lg"
 position = Vector2(115, 676)
 scale = Vector2(4, 4)
 size = "lg"
+
+[node name="CashRegister" parent="." unique_id=1554111202 instance=ExtResource("5_iywne")]
+position = Vector2(1027, 249)
+rotation = 0.17453292
+scale = Vector2(8, 8)
+skew = -0.17453292

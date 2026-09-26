@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b15eqk2cxq0gu"]
+
+[ext_resource type="Texture2D" uid="uid://xfwcp3ifrkrc" path="res://assets/cash_register.png" id="1_md85c"]
+[ext_resource type="FontFile" uid="uid://digm3x8bedixb" path="res://assets/fonts/pixelsix00.ttf" id="2_qyy31"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a751v"]
+font = ExtResource("2_qyy31")
+font_color = Color(0, 0.7411765, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a751v"]
+size = Vector2(30, 29)
+
+[node name="CashRegister" type="StaticBody2D" unique_id=1554111202]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=577701178]
+position = Vector2(-0.25, -0.3)
+texture = ExtResource("1_md85c")
+
+[node name="Label" type="Label" parent="." unique_id=963604722]
+offset_left = -4.0
+offset_top = -12.0
+offset_right = 56.0
+offset_bottom = 6.0
+scale = Vector2(0.25, 0.25)
+text = "000000"
+label_settings = SubResource("LabelSettings_a751v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1909774400]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_a751v")
