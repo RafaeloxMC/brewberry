@@ -19,7 +19,7 @@ var hints := [
 	"there are two red buttons. under no circumstances, press the right one.",
 	"the left one dispenses the drink.",
 	"what the right one does... just dont press it...",
-	"i'd tell you to ask the last brrkeeper but he's not here anymore.",
+	"i'd tell you to ask the last barkeeper but he's not here anymore.",
 	"oh well, whatever! if you finished dispensing the drink,",
 	"make sure to add the special requirements for the order. if the customer",
 	"doesn't want foam, just use the spoon! if they want a straw, add one!",
