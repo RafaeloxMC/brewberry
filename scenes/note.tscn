@@ -16,15 +16,18 @@ script = ExtResource("2_njo4t")
 texture = ExtResource("1_43c4j")
 
 [node name="Size" type="Label" parent="First" unique_id=1908691063]
-offset_left = -4.0
+custom_minimum_size = Vector2(60, 39)
+custom_maximum_size = Vector2(60, 39)
+offset_left = -3.0
 offset_top = -2.0
-offset_right = 36.0
-offset_bottom = 21.0
-scale = Vector2(0.3, 0.3)
-text = "sm"
+offset_right = 56.999992
+offset_bottom = 37.0
+scale = Vector2(0.15, 0.15)
+text = "small"
 label_settings = SubResource("LabelSettings_a751v")
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Second" type="Node2D" parent="." unique_id=1239720730]
 position = Vector2(12, 3)
@@ -32,16 +35,19 @@ position = Vector2(12, 3)
 [node name="Sprite2D" type="Sprite2D" parent="Second" unique_id=1795337320]
 texture = ExtResource("1_43c4j")
 
-[node name="Foam" type="Label" parent="Second" unique_id=1303508926]
-offset_left = -4.0
+[node name="Foam" type="Label" parent="Second" unique_id=1146254625]
+custom_minimum_size = Vector2(60, 39)
+custom_maximum_size = Vector2(60, 39)
+offset_left = -3.0
 offset_top = -2.0
-offset_right = 36.0
-offset_bottom = 21.0
-scale = Vector2(0.3, 0.3)
-text = "sm"
+offset_right = 56.999992
+offset_bottom = 37.0
+scale = Vector2(0.15, 0.15)
+text = "small"
 label_settings = SubResource("LabelSettings_a751v")
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Third" type="Node2D" parent="." unique_id=1475576526]
 position = Vector2(24, 6)
@@ -49,13 +55,16 @@ position = Vector2(24, 6)
 [node name="Sprite2D" type="Sprite2D" parent="Third" unique_id=245793519]
 texture = ExtResource("1_43c4j")
 
-[node name="Straw" type="Label" parent="Third" unique_id=1467464513]
-offset_left = -4.0
+[node name="Straw" type="Label" parent="Third" unique_id=1532207754]
+custom_minimum_size = Vector2(60, 39)
+custom_maximum_size = Vector2(60, 39)
+offset_left = -3.0
 offset_top = -2.0
-offset_right = 36.0
-offset_bottom = 21.0
-scale = Vector2(0.3, 0.3)
-text = "sm"
+offset_right = 56.999992
+offset_bottom = 37.0
+scale = Vector2(0.15, 0.15)
+text = "small"
 label_settings = SubResource("LabelSettings_a751v")
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
+vertical_alignment = 1
+autowrap_mode = 3

@@ -5,6 +5,6 @@ extends Node2D
 @onready var straw: Label = $Third/Straw
 
 func _process(_delta: float) -> void:
-	size.text = GameManager.current_order_size
-	foam.text = "ye" if GameManager.current_order_foam else "no"
-	straw.text = "st" if GameManager.current_order_straw else "no"
+	size.text = "large" if GameManager.current_order_size == "lg" else "normal" if GameManager.current_order_size == "md" else "small"
+	foam.text = "foam" if GameManager.current_order_foam else "no foam"
+	straw.text = "with straw" if GameManager.current_order_straw else "no straw"

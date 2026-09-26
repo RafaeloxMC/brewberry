@@ -18,4 +18,6 @@ func _handle_sell(_price: int) -> void:
 		animation_player.play("show_and_hide")
 	else:
 		await get_tree().process_frame
-		label.text = "i'd like one " + GameManager.current_order_size + " root beer " + ("with" if GameManager.current_order_foam else "without") + " foam and " + ("with" if GameManager.current_order_straw else "without") + " a straw, please!"
+		await get_tree().create_timer(2).timeout
+		label.text = "i'd like one " + ("large" if GameManager.current_order_size == "lg" else "normal" if GameManager.current_order_size == "md" else "small") + " root beer " + ("with" if GameManager.current_order_foam else "without") + " foam and " + ("with" if GameManager.current_order_straw else "without") + " a straw, please!"
+		animation_player.play("show_and_hide")
