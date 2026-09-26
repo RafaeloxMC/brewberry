@@ -307,7 +307,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7q2t1"]
-size = Vector2(12, 26)
+size = Vector2(12, 19)
 
 [node name="Cup" type="Area2D" unique_id=1856958388]
 script = ExtResource("2_7q2t1")
@@ -317,7 +317,7 @@ sprite_frames = SubResource("SpriteFrames_a751v")
 animation = &"sm_foamless_straw"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=284815782]
-position = Vector2(0, 3)
+position = Vector2(0, 6.5)
 shape = SubResource("RectangleShape2D_7q2t1")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
