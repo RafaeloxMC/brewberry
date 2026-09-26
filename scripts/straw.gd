@@ -15,6 +15,8 @@ func _input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 func _process(_delta: float) -> void:
 	if dragging && GameManager.is_dragging == null:
 		global_position = get_global_mouse_position() + drag_offset
+		self.skew = (get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
+		self.rotation = -(get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
 	else:
 		if self.get_overlapping_areas().size() > 0:
 			for area in self.get_overlapping_areas():
