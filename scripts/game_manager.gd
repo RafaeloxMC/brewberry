@@ -18,3 +18,10 @@ func _ready() -> void:
 func _on_sold(price: int) -> void:
 	audio_stream_player.play(0.3)
 	cash += price
+	generate_new_order()
+	# integrate order_active = false and button to accept order
+
+func generate_new_order() -> void:
+	current_order_size = "sm" if randi_range(0, 1) == 0 else "md" if randi_range(0, 1) == 0 else "lg" 
+	current_order_foam = true if randi_range(0, 1) == 0 else false
+	current_order_straw = true if randi_range(0, 1) == 0 else false
