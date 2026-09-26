@@ -12,4 +12,5 @@ func _process(_delta: float) -> void:
 					continue
 				var val = 1 if area.size == "sm" else 3 if area.size == "md" else 5
 				GameManager.sell.emit(val)
-				area.queue_free()
+				area.get_child(0).play(area.size + "_empty")
+				area.global_position = area.origin

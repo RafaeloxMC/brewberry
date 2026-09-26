@@ -6,8 +6,11 @@ extends Area2D
 # sizes sm, md, lg
 @export var size := "sm"
 
+var origin := Vector2.ZERO
+
 func _ready() -> void:
 	animated_sprite_2d.play(size + "_empty")
+	origin = self.global_position
 
 func fill() -> void:
 	animated_sprite_2d.play(size + "_fill")
@@ -25,7 +28,6 @@ func _process(_delta: float):
 		position = get_global_mouse_position()
 	self.skew = (get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
 	self.rotation = -(get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
-
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event.is_action("lmb") && GameManager.is_dragging == null:
