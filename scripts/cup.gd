@@ -22,6 +22,8 @@ func _on_mouse_exited():
 func _process(_delta: float):
 	if GameManager.is_dragging == self and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		position = get_global_mouse_position()
+	self.skew = (get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
+	self.rotation = -(get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
 
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
