@@ -41,8 +41,8 @@ mouse_filter = 2
 texture = ExtResource("1_uwrxv")
 
 [node name="Fountain" parent="." unique_id=987769952 instance=ExtResource("3_lnu2h")]
-position = Vector2(576, 150)
-scale = Vector2(12, 12)
+position = Vector2(576, 140)
+scale = Vector2(10, 10)
 
 [node name="Cups" type="Node2D" parent="." unique_id=97841430]
 
