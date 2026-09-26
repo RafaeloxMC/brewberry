@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b15eqk2cxq0gu" path="res://scenes/cash_register.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://c3vwfwqk51ek4" path="res://scenes/order_area.tscn" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://c6xpkcdjyd1gt" path="res://scenes/note.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://clm4jrv6u7g2o" path="res://scenes/straw_container.tscn" id="8_gee14"]
 
 [node name="Game" type="Control" unique_id=1593082054]
 layout_mode = 3
@@ -154,3 +155,7 @@ size = "lg"
 [node name="Note" parent="." unique_id=331613462 instance=ExtResource("7_u5sy4")]
 position = Vector2(770, 432.415)
 scale = Vector2(5, 5)
+
+[node name="StrawContainer" parent="." unique_id=1398983660 instance=ExtResource("8_gee14")]
+position = Vector2(413, 209)
+scale = Vector2(7, 7)

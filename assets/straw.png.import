@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuqk0m0ewqeqv"
-path="res://.godot/imported/order_area.png-e1c1bae6f2ce0b22ac42993d8781a247.ctex"
+uid="uid://cpcqgw6fa77py"
+path="res://.godot/imported/straw.png-6cb3319956510e5a369acdd9d3cabf8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/aseprite/order_area.png"
-dest_files=["res://.godot/imported/order_area.png-e1c1bae6f2ce0b22ac42993d8781a247.ctex"]
+source_file="res://assets/straw.png"
+dest_files=["res://.godot/imported/straw.png-6cb3319956510e5a369acdd9d3cabf8e.ctex"]
 
 [params]
 

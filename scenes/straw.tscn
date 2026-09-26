@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://de6hri6gq7jkw"]
+
+[ext_resource type="Texture2D" uid="uid://cpcqgw6fa77py" path="res://assets/straw.png" id="1_2tvsx"]
+[ext_resource type="Script" uid="uid://dtb3e75hd2qop" path="res://scripts/straw.gd" id="1_ovola"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a751v"]
+size = Vector2(4, 12)
+
+[node name="Straw" type="Area2D" unique_id=653396468]
+script = ExtResource("1_ovola")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=337443195]
+texture = ExtResource("1_2tvsx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1266972648]
+shape = SubResource("RectangleShape2D_a751v")
