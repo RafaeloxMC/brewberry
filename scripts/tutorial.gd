@@ -39,6 +39,8 @@ func _on_gui_input(event: InputEvent) -> void:
 		
 func go_to_next_info() -> void:
 	if i >= hints.size() - 1:
+		GameManager.current_order_active
+		GameManager.sell.emit(0)
 		self.queue_free()
 		return
 	i += 1

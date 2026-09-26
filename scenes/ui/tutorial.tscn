@@ -3,10 +3,115 @@
 [ext_resource type="Script" uid="uid://v8n2cd2qi36y" path="res://scripts/tutorial.gd" id="1_6e533"]
 [ext_resource type="Texture2D" uid="uid://bpxplnb43dvn4" path="res://assets/bubble.png" id="1_k8r76"]
 [ext_resource type="FontFile" uid="uid://digm3x8bedixb" path="res://assets/fonts/pixelsix00.ttf" id="3_4de72"]
+[ext_resource type="AudioStream" uid="uid://bmwuq18hsaqiy" path="res://assets/audio/phone.wav" id="4_4de72"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kqa8n"]
+font = ExtResource("3_4de72")
+font_color = Color(0.69803923, 0.69803923, 0.69803923, 0.33333334)
 
 [sub_resource type="LabelSettings" id="LabelSettings_a751v"]
 font = ExtResource("3_4de72")
 font_color = Color(0.09019608, 0.09019608, 0.09019608, 1)
+
+[sub_resource type="Animation" id="Animation_gcvyo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.5882353)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background/Label:label_settings:font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.69803923, 0.69803923, 0.69803923, 0.33333334)]
+}
+
+[sub_resource type="Animation" id="Animation_nrihu"]
+resource_name = "tutorial"
+length = 4.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.6, 4.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 3.3,
+"stream": ExtResource("4_4de72")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0.5882353)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background/Label:label_settings:font_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.69803923, 0.69803923, 0.69803923, 0), Color(0.69803923, 0.69803923, 0.69803923, 0), Color(0.69803923, 0.69803923, 0.69803923, 0.33333334)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_egd42"]
+_data = {
+&"RESET": SubResource("Animation_gcvyo"),
+&"tutorial": SubResource("Animation_nrihu")
+}
 
 [node name="Tutorial" type="Control" unique_id=103318636]
 layout_mode = 3
@@ -26,7 +131,24 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5882353)
 
+[node name="Label" type="Label" parent="Background" unique_id=1051503815]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -11.5
+offset_right = 165.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "click on the speech bubble to continue!"
+label_settings = SubResource("LabelSettings_kqa8n")
+
 [node name="Bubble" type="TextureRect" parent="." unique_id=847570699]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 32.0
 offset_top = 396.0
@@ -54,5 +176,11 @@ label_settings = SubResource("LabelSettings_a751v")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1447063574]
+libraries/ = SubResource("AnimationLibrary_egd42")
+autoplay = &"tutorial"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=175966375]
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
