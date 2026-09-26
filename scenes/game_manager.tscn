@@ -2,9 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cnikwwi4tmceq" path="res://scripts/game_manager.gd" id="1_hwd4i"]
 [ext_resource type="AudioStream" uid="uid://dvw0ab27p6jno" path="res://assets/audio/cash_register.wav" id="2_glms7"]
+[ext_resource type="AudioStream" uid="uid://dgnav4lk1s56j" path="res://assets/audio/Brewberry.wav" id="3_udu3i"]
 
 [node name="GameManager" type="Node" unique_id=1793481844]
 script = ExtResource("1_hwd4i")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=580630641]
 stream = ExtResource("2_glms7")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1817062991]
+stream = ExtResource("3_udu3i")
+autoplay = true
