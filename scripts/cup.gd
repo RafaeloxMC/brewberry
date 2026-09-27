@@ -32,6 +32,11 @@ func _process(_delta: float):
 			GameManager.is_dragging = null
 			audio_stream_player.volume_db = randf_range(-8, -6)
 			audio_stream_player.play()
+			if self.get_overlapping_areas().size() > 0:
+				for area in self.get_overlapping_areas():
+					if area.name == "Bin":
+						self.global_position = origin
+						animated_sprite_2d.play(size + "_empty")
 		
 	self.skew = (get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
 	self.rotation = -(get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0

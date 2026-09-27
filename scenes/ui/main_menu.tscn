@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bjjnuy0b0f3la" path="res://scenes/phone.tscn" id="11_1dfpl"]
 [ext_resource type="PackedScene" uid="uid://d0e7jpk72s2h5" path="res://scenes/cup.tscn" id="12_qywvv"]
 [ext_resource type="PackedScene" uid="uid://bd3a2ldv4k0n8" path="res://scenes/spoon.tscn" id="13_3wgol"]
+[ext_resource type="PackedScene" uid="uid://f2v7npho0w4d" path="res://scenes/bin.tscn" id="13_8ekit"]
 
 [sub_resource type="Animation" id="Animation_otr3d"]
 length = 0.001
@@ -42,7 +43,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_n4uci"]
 resource_name = "cash_register"
-length = 0.19999999999999998
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -58,7 +59,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_8ekit"]
 resource_name = "phone"
-length = 0.19999999999999998
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -134,6 +135,12 @@ position = Vector2(413, 209)
 rotation = -0.03490658
 scale = Vector2(7.0000005, 7)
 skew = 0.034906507
+
+[node name="Bin" parent="." unique_id=394808523 instance=ExtResource("13_8ekit")]
+position = Vector2(838, 579)
+rotation = 0.08726646
+scale = Vector2(8, 8)
+skew = -0.08726646
 
 [node name="Cups" type="Node2D" parent="." unique_id=97841430]
 

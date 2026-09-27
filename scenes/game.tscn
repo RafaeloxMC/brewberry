@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c6xpkcdjyd1gt" path="res://scenes/note.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://clm4jrv6u7g2o" path="res://scenes/straw_container.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://bjjnuy0b0f3la" path="res://scenes/phone.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://f2v7npho0w4d" path="res://scenes/bin.tscn" id="12_trtic"]
 
 [node name="Game" type="Control" unique_id=1593082054]
 layout_mode = 3
@@ -99,6 +100,18 @@ position = Vector2(87, 335.00003)
 rotation = -0.2617994
 scale = Vector2(5, 5)
 skew = 0.26179934
+
+[node name="Bin" parent="." unique_id=394808523 instance=ExtResource("12_trtic")]
+position = Vector2(838, 579)
+rotation = 0.08726646
+scale = Vector2(8, 8)
+skew = -0.08726646
+
+[node name="Spoon" parent="." unique_id=1752889901 instance=ExtResource("7_0tnpc")]
+position = Vector2(284, 242)
+rotation = -0.23212878
+scale = Vector2(4, 4)
+skew = 0.23212874
 
 [node name="Cups" type="Node2D" parent="." unique_id=97841430]
 
@@ -191,9 +204,3 @@ size = "lg"
 position = Vector2(115, 676)
 scale = Vector2(4, 4)
 size = "lg"
-
-[node name="Spoon" parent="Cups/LG" unique_id=1752889901 instance=ExtResource("7_0tnpc")]
-position = Vector2(284, 242)
-rotation = -0.23212878
-scale = Vector2(4, 4)
-skew = 0.23212878

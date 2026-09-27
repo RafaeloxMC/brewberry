@@ -2,7 +2,7 @@
 
 A submission for the Cozy Fall Game Jam 2026
 
-![image](brewberry.png)
+![image](assets/logo.png)
 
 # Credits
 
