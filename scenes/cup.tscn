@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bv7gh7kdqrdis" path="res://assets/cups.png" id="1_vafus"]
 [ext_resource type="Script" uid="uid://c2kciue005n8m" path="res://scripts/cup.gd" id="2_7q2t1"]
+[ext_resource type="AudioStream" uid="uid://xw7js34ihcjh" path="res://assets/audio/place.wav" id="3_ssn6n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7q2t1"]
 atlas = ExtResource("1_vafus")
@@ -319,6 +320,10 @@ animation = &"sm_empty"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=284815782]
 position = Vector2(0, 6.5)
 shape = SubResource("RectangleShape2D_7q2t1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2108596924]
+stream = ExtResource("3_ssn6n")
+volume_db = -6.0
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

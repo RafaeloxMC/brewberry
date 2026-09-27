@@ -2,6 +2,7 @@ class_name Cup
 extends Area2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 # sizes sm, md, lg
 @export var size := "sm"
@@ -26,6 +27,12 @@ func _on_mouse_exited():
 func _process(_delta: float):
 	if GameManager.is_dragging == self and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		position = get_global_mouse_position()
+	else:
+		if GameManager.is_dragging == self:
+			GameManager.is_dragging = null
+			audio_stream_player.volume_db = randf_range(-8, -6)
+			audio_stream_player.play()
+		
 	self.skew = (get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
 	self.rotation = -(get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
 
