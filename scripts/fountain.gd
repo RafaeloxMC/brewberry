@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event.is_action("lmb") and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
@@ -10,6 +11,7 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 				if area is Area2D && area.get_child(0) is AnimatedSprite2D && !(area.get_child(0) as AnimatedSprite2D).animation.ends_with("_fill"):
 					area.get_child(0).play(area.size + "_fill")
 					animated_sprite_2d.play("fill")
+					audio_stream_player.play(0.85)
 
 
 func _on_button_2_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:

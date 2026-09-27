@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://btgyylw7lo5u" path="res://assets/fountain.png" id="1_50hkb"]
 [ext_resource type="Script" uid="uid://cwgyun03jgsjp" path="res://scripts/fountain.gd" id="2_m72p2"]
+[ext_resource type="AudioStream" uid="uid://b7aeoge0hr7us" path="res://assets/audio/drink.wav" id="3_lfgns"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a751v"]
 size = Vector2(2, 3)
@@ -80,6 +81,11 @@ animation = &"fill"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=777124484]
 position = Vector2(-5, 5.5)
 shape = SubResource("RectangleShape2D_kqa8n")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=364761372]
+stream = ExtResource("3_lfgns")
+volume_db = -6.0
+max_polyphony = 10
 
 [connection signal="input_event" from="Button" to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
