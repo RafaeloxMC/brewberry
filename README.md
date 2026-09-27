@@ -2,6 +2,8 @@
 
 A submission for the Cozy Fall Game Jam 2026
 
+![image](brewberry.png)
+
 # Credits
 
 Most assets were fully made by me. I made the sprites, the background music and pretty much everything else! I do have to give some credits for sound effects, though!
