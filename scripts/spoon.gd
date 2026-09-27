@@ -11,7 +11,7 @@ func _process(_delta: float) -> void:
 	else:
 		if GameManager.is_dragging == self:
 			GameManager.is_dragging = null
-			self.global_position = origin
+			move_to(origin, 0.25)
 		
 	self.skew = (get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
 	self.rotation = -(get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
@@ -35,3 +35,7 @@ func _on_mouse_exited():
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event.is_action("lmb") && GameManager.is_dragging == null:
 		GameManager.is_dragging = self
+		
+func move_to(target: Vector2, duration: float):
+	var tween := create_tween()
+	tween.tween_property(self, "global_position", target, duration).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
