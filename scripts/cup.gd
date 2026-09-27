@@ -38,8 +38,8 @@ func _process(_delta: float):
 						self.global_position = origin
 						animated_sprite_2d.play(size + "_empty")
 		
-	self.skew = (get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
-	self.rotation = -(get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
+	self.skew = ((get_viewport_rect().size.x / 2.0) - position.x) / get_viewport_rect().size.x / 2.0
+	self.rotation = -(((get_viewport_rect().size.x / 2.0) - position.x) / get_viewport_rect().size.x / 2.0)
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event.is_action("lmb") && GameManager.is_dragging == null:

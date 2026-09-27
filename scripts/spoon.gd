@@ -13,8 +13,8 @@ func _process(_delta: float) -> void:
 			GameManager.is_dragging = null
 			move_to(origin, 0.25)
 		
-	self.skew = (get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
-	self.rotation = -(get_window().size.x / 2.0 - position.x) / get_window().size.x / 2.0
+	self.skew = ((get_viewport_rect().size.x / 2.0) - position.x) / get_viewport_rect().size.x / 2.0
+	self.rotation = -(((get_viewport_rect().size.x / 2.0) - position.x) / get_viewport_rect().size.x / 2.0)
 	
 	if self.get_overlapping_areas().size() > 0:
 		for area in self.get_overlapping_areas():
